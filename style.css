@@ -1,0 +1,73 @@
+.container{
+ font-size: 11px;
+}
+h2, h4{
+  text-align: center;
+  font-family: serif;
+  color: tomato;
+}
+h4{
+  color: blueviolet;
+}
+td{
+  font-family: fantasy;
+}
+td a{
+  color: wheat;
+  font-family: serif;
+  
+}
+   /* Batton Start*/
+td a{
+  position: absolute;
+  transform: translate(-30%,-17%);
+  width: 36px;
+  height: 21px;
+  line-height: 18px;
+  text-decoration: none;
+  font-size: 7px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  background: linear-gradient(90deg,#0074D9,#FF4136,#FFDC00,#0074D9);
+  background-size: 400%;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+td a:hover{
+ animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+  
+  0%{
+    background-position: 300%;
+  }
+  100%{
+    background-position: 0%;
+  }
+}
+
+td a:before{
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: linear-gradient(90deg,#0074D9,#FF4136,#FFDC00,#0074D9);
+  background-size: 400%;
+  border-radius: 40px;
+  filter: blur(30px);
+  opacity: 0;
+}
+
+td a:hover:before{
+  animation: animate 5s linear infinite;
+  border-radius: 40px;
+  opacity: 1;
+}
+  /* Batton End*/
